@@ -8,15 +8,15 @@
         "target_path": "hardware/samsung"
     },
     {
-	"remote": "github",
-        "repository": "LehKeda/android_kernel_samsung_m51",
-        "target_path": "kernel/samsung/m51",
-	"branch": "ten"
+	"remote": "gitlab",
+        "repository": "horoidrom/rr",
+        "target_path": "kernel/samsung/m01q",
+	"branch": "main"
     },
     {
 	"remote": "github",
-        "repository": "LehKeda/android_vendor_samsung_m51",
-        "target_path": "vendor/samsung/m51",
-	"branch": "ten"
+        "repository": "horoidrom/vendor_18_m01q",
+        "target_path": "vendor/samsung/m01q",
+	"branch": "main"
     }
 ]
