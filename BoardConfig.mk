@@ -63,7 +63,7 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 TARGET_KERNEL_ARCH := arm64
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb/m01.dtb
-#BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
 TARGET_KERNEL_SOURCE := kernel/samsung/m01
 #TARGET_KERNEL_CONFIG := m01q_defconfig
@@ -193,14 +193,14 @@ TARGET_USES_GRALLOC1 := true
 TARGET_USES_COLOR_METADATA := true
 TARGET_NO_RPC := true
 
-
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Media
 TARGET_DISABLED_UBWC := true
 TARGET_USES_MEDIA_EXTENSIONS := true
 
-#Enable PD locater/notifier
-#TARGET_PD_SERVICE_ENABLED := true
 
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
@@ -210,9 +210,6 @@ USE_SENSOR_MULTI_HAL := true
 
 # Enable sensor Version V_2
 USE_SENSOR_HAL_VER := 2.0
-
-#Enable LM
-#TARGET_USES_LM := true
 
 # Enable QG user space
 PMIC_QG_SUPPORT := true
