@@ -48,6 +48,12 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/audio_policy_configuration.xml \
     $(DEVICE_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/audio_policy_volumes.xml \
     $(DEVICE_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default_volume_tables.xml
+	
+# Bluetooth
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default \
+    android.hardware.bluetooth.audio@2.0-impl \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -83,9 +89,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
 
 # GSI AVB Public Keys
 PRODUCT_PACKAGES += \
@@ -96,6 +99,7 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
+	libfmjni
     libqcomfm_jni \
     init.qti.fm.sh \
     qcom.fmradio
@@ -112,13 +116,34 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
+	
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.secure_element@1.0 \
+    librmnetctl \
+    libcnefeatureconfig \
+    libprotobuf-cpp-full \
+    libxml2 \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
+
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
+    lib-imsvtshim \
     ims_ext_common.xml
 
 # Skip mount
