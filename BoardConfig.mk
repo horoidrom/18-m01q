@@ -215,5 +215,5 @@ USE_SENSOR_HAL_VER := 2.0
 PMIC_QG_SUPPORT := true
 
 # inherit from the proprietary version
-#-include vendor/samsung/m51/BoardConfigVendor.mk
+-include vendor/samsung/m01q/BoardConfigVendor.mk
 
