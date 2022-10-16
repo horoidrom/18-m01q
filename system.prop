@@ -9,116 +9,31 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 persist.hwc.mdpcomp.enable=true
 persist.demo.hdmirotationlock=false
-
-#Property to enable display default color mode
 vendor.display.enable_default_color_mode=1
-
-# Display Properties as per treble compliance
 vendor.gralloc.enable_fb_ubwc=1
 vendor.display.disable_skip_validate=1
-
-#ro.hdmi.enable=true
-#tunnel.decode=true
-
-#
-# system props for the cne module
-#
 persist.vendor.cne.feature=1
-
-
-# system property to accelerate Progressive Download using STA
-persist.mm.sta.enable=0
-
-#
-# system props for the data modules
-#
-#ro.vendor.use_data_netmgrd=true
-#persist.data.netmgrd.qos.enable=true
-#persist.vendor.data.mode=concurrent
-
 #system props for time-services
 persist.timed.enable=true
-
 #system prop for Bluetooth
 ro.bluetooth.library_name=libbluetooth_qti.so
-
-#
-# system prop for opengles version
-#
-# 131072 is decimal for 0x20000 to report version 2
-# 196608 is decimal for 0x30000 to report major/minor versions as 3/0
-# 196609 is decimal for 0x30001 to report major/minor versions as 3/1
-#ro.opengles.version=196609
-
-#
-# System props for telephony
-# System prop to turn on CdmaLTEPhone always
-
-#Simulate sdcard on /data/media
-#
 persist.fuse_sdcard=true
-
-#property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
-#propery to enable VDS WFD solution
 persist.hwc.enable_vds=1
-
-#selects CoreSight configuration to enable
 persist.debug.coresight.config=stm-events
-
-#selects Console configuration to enable
 persist.console.silent.config=1
-
-#property to enable narrow search range for video encoding
 vendor.vidc.enc.narrow.searchrange=1
-
-#property to enable fingerprint
 persist.qfp=false
-
-
-#properties for limiting preview size in camera
 persist.vendor.camera.display.umax=1920x1080
 persist.vendor.camera.display.lmax=1280x720
-
-#Expose aux camera for below packages
 vendor.camera.aux.packagelist=org.codeaurora.snapcam
-
-#Whitelisting the below packages
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 persist.camera.privapp.list=org.codeaurora.snapcam
-# HS60 code for HS60-1203 by zhuqiang at 2019/09/19 start
 persist.vendor.radio.uicc_se_enabled=false
-# HS60 code for HS60-1203 by zhuqiang at 2019/09/19 end
-#set cutoff voltage to 3400mV
-
-
-#
-# from device/Huaqin/hs60_common_32/system.prop
-#
-#
-# System properties for hs60_common_32
-#
-
-#Expose aux camera for below packages
-#HS60 code for P191101-04645 by zhangle at 20191128 start.
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.sec.android.app.camera,com.val.hardware
-#HS60 code for P191101-04645 by zhangle at 20191128 end.
-
-#huaqin modify for SR-ZQL1695-01-65 by donghaizhou at 2019/08/27 start
 persist.sys.camera.camera2=true
-#huaqin modify for SR-ZQL1695-01-65 by donghaizhou at 2019/08/27 end
-
-#HS60 code for HS60-46 by xuxianwei at 20190717 start#
 persist.vendor.camera.expose.aux=1
-#HS60 code for HS60-46 by xuxianwei at 20190717 end#
-#HS60 code for P201006-02836  by liufurong at 20201030 start
 vendor.display.idle_time=1000
-#HS60 code for P201006-02836  by liufurong at 20201030 end
-# end of device/Huaqin/hs60_common_32/system.prop
-
-#
-# ADDITIONAL_BUILD_PROPERTIES
-#
 ro.treble.enabled=false
 persist.log.semlevel=0xFFFFFF00
 persist.log.level=0xFFFFFFFF
