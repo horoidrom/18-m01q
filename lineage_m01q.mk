@@ -17,7 +17,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_m01q
 PRODUCT_DEVICE := m01q
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-M015G
+PRODUCT_MODEL := SAMSUNG GALAXY M01
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 

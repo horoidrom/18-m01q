@@ -24,6 +24,10 @@ TARGET_USES_64_BIT_BINDER := true
 
 BOARD_USES_QCOM_HARDWARE := true
 
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+
+
+
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
@@ -32,9 +36,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # FM
-BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true
-AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # DRM
@@ -57,7 +59,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm439
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/framework_manifest.xml
+
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -94,6 +98,10 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS +=	--board $(TARGET_BOARD_PLATFORM) 
 BOARD_MKBOOTIMG_ARGS +=	--dtb $(TARGET_PREBUILT_DTB)
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/dsp:/dsp \
+    /vendor/firmware_mnt:/firmware \
+    /mnt/vendor/persist:/persist
 
 
 # Partitions
@@ -128,6 +136,10 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     optics \
     prism \
     omr
+
+#power
+TARGET_USES_INTERACTION_BOOST := true
+
 
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
@@ -178,6 +190,7 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Face unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_KEYMASTER_VARIANT := samsung
 
 # Screen HDR
 
